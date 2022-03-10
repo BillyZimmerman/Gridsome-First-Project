@@ -4,7 +4,29 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const tailwind = require('tailwindcss')
+
+const postcssPlugins = [
+      tailwind(),
+]
+
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'First Gridsome Project',
+  plugins: [],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
+    },
+  },
 }
+
+// plugins: [
+//   {
+//     use: 'gridsome-plugin-tailwind',
+//       options: {
+//         config: './tailwind.config.js'
+//       }
+//   }
+// ]

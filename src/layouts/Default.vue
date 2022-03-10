@@ -21,5 +21,4 @@ query {
 }
 </static-query>
 
-<style>
-</style>
+<style src='../main.css'/>
